@@ -84,7 +84,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public CorsConfigurationSource corsConfigurationSource() {
         final CorsConfiguration configuration = new CorsConfiguration();
 //        configuration.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
-        configuration.setAllowedOrigins(Collections.singletonList("https://scheduler2-ui-kamilcinner.web.app/"));
+        configuration.setAllowedOrigins(Collections.singletonList("https://scheduler2-ui-kamilcinner.web.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setMaxAge(0L);
         // setAllowCredentials(true) is important, otherwise:
