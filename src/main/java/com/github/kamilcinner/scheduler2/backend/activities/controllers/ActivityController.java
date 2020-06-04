@@ -116,6 +116,21 @@ public class ActivityController {
         return ResponseEntity.noContent().build();
     }
 
+    // Delete all Activities.
+    @DeleteMapping("/activities")
+    ResponseEntity<?> deleteAll() {
+
+        // Get all Activities by current User name.
+        List<Activity> activities = activityRepository.findByOwnerUsername(CurrentUserUsername.get(), Sort.unsorted());
+
+        // Delete each Activity in a loop.
+        for (Activity activity : activities) {
+            activityRepository.delete(activity);
+        }
+
+        return ResponseEntity.noContent().build();
+    }
+
     // Get Activities from Pollub.
     @GetMapping("/activities/pollub")
     void addActivitiesFromPollubToUser() {
