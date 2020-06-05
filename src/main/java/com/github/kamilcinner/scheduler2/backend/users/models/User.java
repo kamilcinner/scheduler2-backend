@@ -41,7 +41,11 @@ public class User {
     )
     private String email;
 
+    @NotNull
     private boolean enabled = true;
+
+    @NotNull
+    @NotBlank
     private String roles = "ROLE_USER";
 
     public User() {}

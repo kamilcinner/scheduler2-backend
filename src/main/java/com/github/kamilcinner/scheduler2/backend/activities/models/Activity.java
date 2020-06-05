@@ -34,6 +34,7 @@ public class Activity {
             max = 500,
             message = "Description can be up to {max} characters long."
     )
+    @NotNull
     private String description = "";
 
     @NotNull(message = "Activity start time is required.")
@@ -46,10 +47,12 @@ public class Activity {
     private Date date;
 
     // Status active if true means that the activity will appear in week schedule.
+    @NotNull
     private boolean statusActive = true;
 
     // Repeat weekly means that the activity will appear in week schedule in every week based on day of the week.
     // Eg. every Monday.
+    @NotNull
     private boolean repeatWeekly = false;
 
     public Activity() {}

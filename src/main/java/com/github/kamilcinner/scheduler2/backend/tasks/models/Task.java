@@ -27,20 +27,24 @@ public class Task {
     private Timestamp dueDateTime;
 
     // Description is optional.
+    @NotNull
     private String description = "";
 
     // Done means that is Task inactive (already done).
+    @NotNull
     private boolean done = false;
 
     // Is Task shared to other users.
     // Shared means that anyone (even anonymous user)
     // can see this Task by URL but can't edit it.
+    @NotNull
     private boolean shared = false;
 
     // Task priority.
     // h - high
     // n - normal (default)
     // l - low
+    @NotNull(message = "Task priority is required.")
     private char priority = 'n';
 
     public Task() {}

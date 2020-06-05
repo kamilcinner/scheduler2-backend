@@ -29,8 +29,10 @@ public class ShoppingList {
     )
     private String name;
 
+    @NotNull
     private Timestamp lastEditDateTime = Timestamp.valueOf(LocalDateTime.now());
 
+    @NotNull
     private boolean shared = false;
 
     public ShoppingList() {}

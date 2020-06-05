@@ -27,6 +27,7 @@ public class ShoppingListItem {
     )
     private String name;
 
+    @NotNull
     private boolean done = false;
 
     public ShoppingListItem() {}
