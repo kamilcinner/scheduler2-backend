@@ -33,6 +33,14 @@ public class UserController {
                             "\"defaultMessage\":\"The given login is already in use.\"" +
                         "}" +
                     "]}");
+        } else if (repository.existsByEmail(user.getEmail())) {
+            return ResponseEntity.badRequest().body(
+                    "{\"errors\":[" +
+                        "{" +
+                            "\"field\":\"email\"," +
+                            "\"defaultMessage\":\"The given email is already in use.\"" +
+                        "}" +
+                    "]}");
         }
 
         // Encode password and add User to database.
