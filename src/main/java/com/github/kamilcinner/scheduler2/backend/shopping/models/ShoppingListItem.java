@@ -36,4 +36,10 @@ public class ShoppingListItem {
         this.shoppingList = shoppingList;
         this.name = name;
     }
+
+    public ShoppingListItem(ShoppingList shoppingList, String name, boolean done) {
+        this.shoppingList = shoppingList;
+        this.name = name;
+        this.done = done;
+    }
 }
